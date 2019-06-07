@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperTextEditor", "SuperTextEditor\SuperTextEditor.csproj", "{9F13DEA0-34A0-4FBC-B809-077226C39213}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "TextEditor", "TextEditor\TextEditor.vdproj", "{14F6BAD9-71A2-4912-B67F-C8DE2918C873}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F13DEA0-34A0-4FBC-B809-077226C39213}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F13DEA0-34A0-4FBC-B809-077226C39213}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F13DEA0-34A0-4FBC-B809-077226C39213}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F13DEA0-34A0-4FBC-B809-077226C39213}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14F6BAD9-71A2-4912-B67F-C8DE2918C873}.Debug|Any CPU.ActiveCfg = Debug
+		{14F6BAD9-71A2-4912-B67F-C8DE2918C873}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {06729CF6-24B6-49F9-A314-73A4E565451D}
+	EndGlobalSection
+EndGlobal

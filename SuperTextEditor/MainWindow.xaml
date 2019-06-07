@@ -1,0 +1,58 @@
+﻿<Window x:Class="SuperTextEditor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wpfTool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
+        xmlns:local="clr-namespace:SuperTextEditor"
+        mc:Ignorable="d"
+        Loaded="WindowLoaded"
+        Title="Super text editor" Height="450" Width="800">
+    <Grid>
+        <wpfTool:ColorPicker Name="colorPicker" SelectedColorChanged="ColorPickerSelectedColorChanged" Margin="156,21,0,0" HorizontalAlignment="Left" Width="87" Height="26" VerticalAlignment="Top"/>
+        <RichTextBox Name="userText" FontFamily="Italic" Margin="0,47,0,-4">
+            <FlowDocument>
+                <Paragraph>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Menu HorizontalAlignment="Left" Height="21" VerticalAlignment="Top" Width="784">
+            <MenuItem Header="File">
+                <MenuItem Header="New" Click="NewFileClick"/>
+                <MenuItem Header="Open" Click="OpenFileClick"/>
+                <MenuItem Header="Save as" Click="SaveAsFileClick"/>
+                <Separator/>
+                <MenuItem Header="Print" Click="PrintFileClick"/>
+                <Separator/>
+                <MenuItem Header="Exit" Click="ExitFileClick"/>
+            </MenuItem>
+            <MenuItem Header="Edit" >
+                <MenuItem Header="Copy" Command="ApplicationCommands.Copy"/>
+                <MenuItem Header="Paste" Command="ApplicationCommands.Paste" />
+                <MenuItem Header="Cut" Command="ApplicationCommands.Cut"/>
+                <Separator/>
+                <MenuItem Header="Select all" Command="ApplicationCommands.SelectAll"/>
+                <Separator/>
+                <MenuItem Header="Undo" Command="ApplicationCommands.Undo"/>
+                <MenuItem Header="Redo" Command="ApplicationCommands.Redo"/>
+            </MenuItem>
+        </Menu>
+        <Button Click="UnderlineButtonClick" HorizontalAlignment="Left" Margin="304,21,0,0" VerticalAlignment="Top" Width="30" Height="26">
+            <StackPanel Width="36" Height="25">
+                <Image Source="icons\underline.png" Height="20" Margin="0,0,12,0"/>
+            </StackPanel>
+        </Button>
+        <Button Click="ItalicButtonClick" HorizontalAlignment="Left" Margin="274,21,0,0" VerticalAlignment="Top" Width="30" Height="26">
+            <StackPanel Width="36" Height="20">
+                <Image Source="icons\italic.png" Height="20" Margin="0,0,10,0"/>
+            </StackPanel>
+        </Button>
+        <Button Click="BoldButtonClick" HorizontalAlignment="Left" Margin="244,21,0,0" VerticalAlignment="Top" Width="30" Height="26">
+            <StackPanel Width="36" Height="20">
+                <Image Source="icons\bold.png" Height="20" Margin="0,0,10,0"/>
+            </StackPanel>
+        </Button>
+        <ComboBox Name="fontFamilyComboBox" HorizontalAlignment="Left" Margin="0,21,0,0" VerticalAlignment="Top" Width="111" Height="26" SelectionChanged="FontFamilyComboBoxSelectionChanged"/>
+        <ComboBox Name="fontSizeComboBox" HorizontalAlignment="Left" Height="26" Margin="111,21,0,0" VerticalAlignment="Top" Width="45" SelectionChanged="FontSizeComboBoxSelectionChanged"/>
+    </Grid>
+</Window>
