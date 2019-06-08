@@ -49,13 +49,13 @@ namespace SuperTextEditor
 
         private void SaveTextPerSecondsInFile(object sender, EventArgs e)
         {
-            const int OFFSET = 0;
             string path = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
-            string text = new TextRange(userText.Document.ContentStart, userText.Document.ContentEnd).Text;
-            using (FileStream stream = new FileStream(path + @"\UserText.txt", FileMode.Create))
+
+            using (FileStream myStream = new FileStream(path + @"\UserText.rtf", FileMode.OpenOrCreate, FileAccess.Write))
             {
-                byte[] bytes = Encoding.Unicode.GetBytes(text);
-                stream.Write(bytes, OFFSET, bytes.Length);
+                TextRange myRange = new TextRange(userText.Document.ContentStart, userText.Document.ContentEnd);
+                myRange.Save(myStream, DataFormats.Rtf);
+                myStream.Close();
             }
         }
 
@@ -123,14 +123,17 @@ namespace SuperTextEditor
 
         private void SaveFileDialog()
         {
-            string text = new TextRange(userText.Document.ContentStart, userText.Document.ContentEnd).Text;
-
             SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Filter = "Text file (*.txt)|*.txt";
+            saveFileDialog.Filter = "RTF Files| *.rtf";
 
             if (saveFileDialog.ShowDialog() == true)
             {
-                File.WriteAllText(saveFileDialog.FileName, text);
+                using (FileStream myStream = new FileStream(saveFileDialog.FileName, FileMode.OpenOrCreate, FileAccess.Write))
+                {
+                    TextRange myRange = new TextRange(userText.Document.ContentStart, userText.Document.ContentEnd);
+                    myRange.Save(myStream, DataFormats.Rtf);
+                    myStream.Close();
+                }
             }
         }
 
@@ -145,12 +148,13 @@ namespace SuperTextEditor
             SaveTextInFile();
 
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Text file (*.txt)|*.txt";
+            openFileDialog.Filter = "RTF Files| *.rtf";
 
             if (openFileDialog.ShowDialog() == true)
             {
                 userText.Document.Blocks.Clear();
-                userText.AppendText(File.ReadAllText(openFileDialog.FileName, Encoding.Default));
+                userText.Selection.Load(new FileStream(openFileDialog.FileName, FileMode.Open), DataFormats.Rtf);
+
             }
         }
 

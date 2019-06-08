@@ -16,7 +16,7 @@
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
-        <Menu HorizontalAlignment="Left" Height="21" VerticalAlignment="Top" Width="784">
+        <Menu Height="21" VerticalAlignment="Top">
             <MenuItem Header="File">
                 <MenuItem Header="New" Click="NewFileClick"/>
                 <MenuItem Header="Open" Click="OpenFileClick"/>

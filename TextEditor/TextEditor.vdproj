@@ -76,12 +76,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_BD00A41CA16D9B40D7D790AB68E6B099"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_9D1F2397DC3245EDAB96ADD578F7D43E"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -115,6 +109,12 @@
         "OwnerKey" = "8:_7ABE347CC2B6DAD8EB5F41ABDA6354C2"
         "MsmSig" = "8:_UNDEFINED"
         }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_BD00A41CA16D9B40D7D790AB68E6B099"
+        "MsmSig" = "8:_UNDEFINED"
+        }
     }
     "Configurations"
     {
@@ -133,6 +133,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -149,6 +165,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -432,7 +456,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:TextEditor"
         "ProductCode" = "8:{F08D2F5E-1271-40FD-84A5-E7BF6AF43C43}"
-        "PackageCode" = "8:{E21291B6-3671-4050-AAB5-5660FC84CC81}"
+        "PackageCode" = "8:{248A0411-6533-4EA8-9D75-8985BD99CEAE}"
         "UpgradeCode" = "8:{D983188E-20D9-48EB-B663-FBA0A66E5F58}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -552,9 +576,9 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_2FEF1439C2ED439B809FC56E772F93BF"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_7EEB07E9A43F48E2962C3D1FD4A403FE"
             {
-            "Name" = "8:TextEditor"
+            "Name" = "8:Text editor"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -566,9 +590,9 @@
             "Icon" = "8:"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_E03831225C224130B3D1521CE980FE1E"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_BA8AF3A6B2574229BFFE451108D84555"
             {
-            "Name" = "8:TextEditor"
+            "Name" = "8:Text editor"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
